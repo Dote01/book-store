@@ -6,7 +6,7 @@ include("database_connection.php");
 $isbn = $_GET["isbn"];
 
 //query to get the book details
-$query = "SELECT isbn, author, title, price FROM books WHERE isbn = $isbn";
+$query = "SELECT isbn, author, title, price FROM books WHERE isbn = '".$isbn."'";
 $result = $db->query($query);
 
 if (!$result) {

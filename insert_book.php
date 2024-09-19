@@ -19,6 +19,7 @@ $title = $_POST["title"];
 $price = $_POST["price"];
 
 
+
 //query execution
 $query = "INSERT INTO books(isbn, author, title, price) VALUES ('".$isbn."', '".$author."', '".$title."', '".$price."')";
 $result = $db->query($query);

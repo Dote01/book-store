@@ -15,7 +15,7 @@
                 <input type="text" name="title">
                 <br><br>
                 <label for="price">Price $</label>
-                <input type="number" name="price">
+                <input type="number" step="0.01" name="price" required>
                 <br><br>
                 <button type="submit">Add New Book</button>
         </form>
