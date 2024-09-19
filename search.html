@@ -1,21 +1,98 @@
 <html>
     <head>
         <title>Book-O-Rama Search</title>
+        <style>
+
+
+                /* Basic reset for margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .search-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+        </style>
         <body>
-            
-        <form action="result.php" method="post">
-            Choose Search Type:<br>
-            <select name="searchtype" id="">
-                <option value="author">Author</option>
-                <option value="title">Title</option>
-                <option value="isbn">ISBN</option>
-            </select>
-            <br>
-            Enter Search Term:<br>
-            <input type="text" name="searchterm" size="40">
-            <br>
-            <input type="submit" name="submit" value="Search">
-        </form>
+        <div class="search-container">
+            <h1>Book-O-Rama Search</h1>
+            <form action="result.php" method="post">
+                <div class="form-group">
+                    <label for="searchtype">Choose Search Type:</label>
+                    <select name="searchtype" id="searchtype">
+                        <option value="author">Author</option>
+                        <option value="title">Title</option>
+                        <option value="isbn">ISBN</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="searchterm">Enter Search Term:</label>
+                    <input type="text" name="searchterm" id="searchterm" placeholder="Search by author, title, or ISBN" required>
+                </div>
+                
+                <input type="submit" name="submit" value="Search">
+            </form>
+        </div>
 
     </body>
     </head>
