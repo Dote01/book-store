@@ -25,7 +25,7 @@ $query = "INSERT INTO books(isbn, author, title, price) VALUES ('".$isbn."', '".
 $result = $db->query($query);
 
 //ensurint query execution
-if(!$result){
+if($result){
     echo "$db->error";
     echo "</br>There was an error with inserting new book to the database, please try again later";
 } else {
